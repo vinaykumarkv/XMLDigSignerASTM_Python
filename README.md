@@ -18,7 +18,7 @@ This project requires the following Python libraries:
 
 To install the required libraries, you can use `pip`. Open a terminal and run the following command:
 
-```bash
+bash
 pip install lxml xmlsec cryptography
 
 ## Components
