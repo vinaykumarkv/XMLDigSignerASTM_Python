@@ -5,6 +5,22 @@ This repository contains three main components for XML signing and verification:
 2. `verifier.py`
 3. `main.py`
 
+## Dependencies
+
+This project requires the following Python libraries:
+
+- `lxml`
+- `xmlsec`
+- `cryptography`
+- `tkinter` (usually included with Python)
+
+## Installation
+
+To install the required libraries, you can use `pip`. Open a terminal and run the following command:
+
+```bash
+pip install lxml xmlsec cryptography
+
 ## Components
 
 ### 1. `signer.py`
