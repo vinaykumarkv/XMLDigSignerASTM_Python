@@ -120,9 +120,4 @@ pip install xmlsec lxml cryptography
 - Select the signed XML file you want to verify.
 - The application will extract the public key, load it, and verify the XML signature.
 
-## Conclusion
-By following this README, you can integrate XML signing and verification functionality into your Python application. The provided scripts and instructions help ensure that XML documents are signed securely and their signatures can be verified.
 
-
-
-This README.md file includes detailed information about each component, how to integrate them individually with other systems, installation instructions, usage examples, and a conclusion. It should serve as a comprehensive guide for understanding and utilizing the XML signing and verification functionality.
