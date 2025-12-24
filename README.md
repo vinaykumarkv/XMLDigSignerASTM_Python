@@ -59,40 +59,42 @@ The `main.py` module contains the main application logic, including a Tkinter GU
 To integrate the `signer.py` module into other systems:
 
 1. **Import Functions:**
-'''python
-from signer import generate_keys, load_private_key, sign_xml, is_xml_signed
-
+~~~python
+    from signer import generate_keys, load_private_key, sign_xml, is_xml_signed
+~~~
 ### Generate Keys:
-'''python
-private_key_pem, public_key_pem = generate_keys()
-Load Private Key:
-key = load_private_key(private_key_pem)
-
+~~~python
+    private_key_pem, public_key_pem = generate_keys()
+    Load Private Key:
+    key = load_private_key(private_key_pem)
+~~~
 ### Sign XML:
-'''python
-sign_xml(xml_file, signed_file, key, public_key_pem)
-Check if XML is Signed:
-doc = etree.parse(xml_file)
-if is_xml_signed(doc):
-    print("The XML document is already signed.")
+~~~python
+    sign_xml(xml_file, signed_file, key, public_key_pem)
+    Check if XML is Signed:
+    doc = etree.parse(xml_file)
+    if is_xml_signed(doc):
+        print("The XML document is already signed.")
+~~~
 Integrating verifier.py
 To integrate the verifier.py module into other systems:
 
 ### Import Functions:
-'''python
-from verifier import extract_public_key, load_public_key, verify_xml
-Extract Public Key:
-public_key_pem = extract_public_key(signed_file)
-Load Public Key:
-key = load_public_key(public_key_pem)
+~~~python
+    from verifier import extract_public_key, load_public_key, verify_xml
+    Extract Public Key:
+    public_key_pem = extract_public_key(signed_file)
+    Load Public Key:
+    key = load_public_key(public_key_pem)
+~~~
 
-###Verify XML:
-'''python
-if verify_xml(signed_file, key):
-    print("Signature verification succeeded.")
-else:
-    print("Signature verification failed.")
-
+### Verify XML:
+~~~python
+    if verify_xml(signed_file, key):
+        print("Signature verification succeeded.")
+    else:
+        print("Signature verification failed.")
+~~~
 ### Integrating main.py
 The main.py module can be run directly to launch the Tkinter GUI application. To integrate it with other systems, you can modify the GUI or use the classes and functions provided in signer.py and verifier.py within other applications.
 
@@ -105,9 +107,9 @@ Customize the GUI elements and functionality as needed.
 
 ## Installation
 To install the required libraries, use the following command:
-'''python
-pip install xmlsec lxml cryptography
-
+~~~python
+    pip install xmlsec lxml cryptography
+~~~
 ### Usage
 ### Sign XML
 - Click the "Sign XML" button.
